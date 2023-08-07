@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace GuessANumber
 {
-    internal class Reader
+    interface IReader
     {
-        public string GetInput(string text) 
-        {
-            Console.WriteLine(text);//необходима валидация
-            var res = Console.ReadLine();
-            return res;
-        }
+        public string GetInput(string text);
     }
 }

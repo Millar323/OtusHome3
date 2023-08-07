@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GuessANumber
 {
-    internal class Number
+    interface INumber
     {
-        public int GuessThis(int start, int end) 
-        {
-            var rnd = new Random();
-            var number = rnd.Next(start, end);
-            return number;
-        }
-
+        public int Number(int start, int end);
     }
 }
